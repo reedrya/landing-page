@@ -1,11 +1,105 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
 @import url("fontawesome-all.min.css");
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500;600;900&display=swap");
+
+/* Skills */
+#skills {
+    max-width: auto;
+    padding: 15px;
+    background: #232323;
+    border-radius: 10px;
+    text-align: center;
+	margin-top: 50px;
+	border: 2px solid #636363;
+}
+
+#skills h3 {
+	font-size: 1.5em;
+    color: #cdcdcd;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+#skills ul {
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+#skills ul li {
+  justify-self: center;
+  display: grid;
+  grid-template:
+    "icon"
+    "line"
+    "dot"
+    "title"
+    "descr" 1fr;
+  justify-items: center;
+  text-align: center;
+  margin-top: 10px;
+  font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+}
+
+#skills ul li .icon {
+  margin-top: 0px;
+  grid-area: icon;
+  width: 5.5rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 2rem;
+  border: 0.4rem solid var(--bgColor);
+  border-radius: 50%;
+  background: var(--accent-color);
+  box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.45),
+	inset -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45);
+}
+
+#skills ul li::before {
+  content: "";
+  grid-area: line;
+  height: 2rem;
+  border-right: 2px dotted currentColor;
+}
+
+#skills ul li::after {
+  content: "";
+  grid-area: dot;
+  width: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--accent-color);
+  justify-self: center;
+  margin-bottom: 0.5rem;
+}
+
+#skills ul li .title {
+  grid-area: title;
+  margin-block: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
 
 /*
 	Astral by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
+/* Custom color variables */
+:root {
+	--lightBlue: rgba(0, 149, 255, 0.904);
+	--limeGreen: rgba(64, 255, 0, 0.797);
+	--purple: rgb(183, 0, 183);
+	--bgColor: rgba(245, 245, 245);
+}
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -36,6 +130,21 @@ body {
 ol, ul {
 	list-style: none;
 }
+
+a {
+	color: var(--lightBlue);
+	text-decoration: none;
+	
+}
+	
+	a:visited {
+		color: var(--purple);
+	}
+	
+
+	a:hover {
+		color: var(--limeGreen);
+	}
 
 blockquote, q {
 	quotes: none;
@@ -70,6 +179,210 @@ input, select, textarea {
 	-webkit-appearance: none;
 	-ms-appearance: none;
 	appearance: none;
+}
+
+/* Language Bar */
+.language-bar {
+    display: flex;
+    margin-bottom: 10px;
+	width: 90%;
+}
+
+.language {
+    padding: 5px;
+    overflow: hidden;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.language-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.language-detail {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+	color: #d9d9d9;
+	font-size: large;
+}
+
+.color-circle {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* Circular image */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circular-image {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    border: 5px solid #d0d0d0; 
+    object-fit: cover;
+}
+
+/* Intro paragraph */
+.intro-paragraph {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	max-width: auto;
+	text-align: left;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	margin-top: 40px;
+	background-color: #222222;
+	border-radius: 10px;
+	padding: 15px 30px;
+	border: 2px solid #636363;
+}
+
+/* Education */
+#education {
+    max-width: auto;
+    padding: 20px;
+    background: #232323;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	border: 2px solid #636363;
+}
+
+#education h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+	margin-top: 10px;
+    color: #cdcdcd;
+}
+
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edu-card {
+	color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+	margin: 10px;
+}
+
+.osu {
+    background: #7d3a00;
+}
+
+.lcc {
+    background: #000e54a7;
+}
+
+.edu-card img {
+    width: 260px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.edu-card h3 {
+    font-size: 1.8em;
+    margin: 0 0 10px;
+}
+
+.edu-card p {
+    margin: 0;
+    font-size: 1.2em;
+	font-family: 'Papyrus', 'fantasy';
+}
+
+.edu-card span {
+    display: block;
+    font-size: 1em;
+    margin-top: 5px;
+    color: #ddd;
+}
+
+.edu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Coursework */
+#education .coursework {
+	margin-left: 20px;
+}
+
+#education .coursework h3 {
+	font-size: 1.1em;
+	text-decoration: underline;
+	margin-bottom: 15px;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 10px;
+}
+
+.course {
+    background-color: #595858a4;
+    padding: 7px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+	margin-bottom: 10px;
+}
+
+.course:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.course h4 {
+    font-size: 17px;
+    color: #ffffff;
+    margin: 0 0 5px;
+	padding-left: 10px;
+}
+
+/* Zoom animation */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+}
+
+.zoom-in-out {
+    animation: zoomInOut 3s ease-in-out infinite;
+}
+
+.three-d-shadow {
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: 3px 3px 0 #00000051, 6px 6px 0 #5555556a, 9px 9px 0 #7777775c;
 }
 
 /* Row */
@@ -1306,7 +1619,7 @@ input, select, textarea {
 	}
 
 	body {
-		background-image: url("images/overlay.png"), url("images/bg.jpg");
+		background-image: url("images/overlay.png"), url("images/bg2.jpg");
 		background-repeat: repeat, no-repeat;
 		background-size: auto, 100% 100%;
 		background-attachment: fixed;
@@ -1435,6 +1748,11 @@ input, select, textarea {
 
 	p, ul, ol, dl, table, blockquote, form {
 		margin-bottom: 2em;
+		color: #d9d9d9;
+	}
+
+	.row2 {
+		margin-top: 30px;
 	}
 
 /* Table */
@@ -1477,7 +1795,7 @@ input, select, textarea {
 	form textarea {
 		-webkit-appearance: none;
 		border: 0;
-		background: #f4f4f4;
+		background-color: #201f1b;
 		padding: 0.75em;
 		width: 100%;
 		-moz-transition: background-color .25s ease-in-out;
@@ -1491,7 +1809,7 @@ input, select, textarea {
 		form input[type="password"]:focus,
 		form select:focus,
 		form textarea:focus {
-			background: #f8f8f8;
+			background-color: #201f1b;
 		}
 
 	form input[type="text"],
@@ -1499,22 +1817,27 @@ input, select, textarea {
 	form input[type="password"],
 	form select {
 		line-height: 1.35em;
+		background-color: #201f1b;
 	}
 
 	form ::-webkit-input-placeholder {
 		color: #999;
+		background-color: #201f1b;
 	}
 
 	form :-moz-placeholder {
 		color: #999;
+		background-color: #201f1b;
 	}
 
 	form ::-moz-placeholder {
 		color: #999;
+		background-color: #201f1b;
 	}
 
 	form :-ms-input-placeholder {
 		color: #999;
+		background-color: #201f1b;
 	}
 
 /* Section/Article */
@@ -1529,6 +1852,8 @@ input, select, textarea {
 
 	header {
 		margin: 0 0 1.5em 0;
+		text-align: center;
+		padding-bottom: 20px;
 	}
 
 		header > p {
