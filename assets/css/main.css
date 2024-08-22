@@ -25,12 +25,16 @@
 .social-list .social {
 	margin: 3px;
 	padding: 3px;
-	max-width: 25%;
+	max-width: 30%;
 }
 
 	.social-list .social:hover {
 		background-color: var(--darkerpaleBlue);
 		border-radius: 10px;
+	}
+
+	.social-list .social.email {
+		max-width: 55%;
 	}
 
 .social-list .social > i {
